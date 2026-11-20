@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Beast Forces Gym
 
 React/Vite frontend, Express API, and MySQL database.
@@ -41,3 +42,6 @@ For data already in local XAMPP MySQL, export the `gym_project` database from ph
 - All live reads and writes use MySQL. `db.json` is only a legacy import source.
 - Passwords are stored as Argon2id hashes. JWTs use `JWT_SECRET`; never expose it or database credentials.
 - Password reset OTPs print in the API terminal; email delivery is not configured.
+=======
+# gym-project
+>>>>>>> c7cd9869f97c2ba2e38340bc5bf93e5502877b10
