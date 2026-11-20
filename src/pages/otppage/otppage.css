@@ -1,0 +1,140 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.login_page_Otppage {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/projectimg/page2.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+.login_form_Otppage {
+  height: 330px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  top: 150px;
+  left: 300px;
+}
+
+.form_circle_Otppage {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgb(2, 2, 71);
+  position: relative;
+  left: 130px;
+  top: 26px;
+}
+.form_head1_Otppage {
+  position: relative;
+  left: 190px;
+  bottom: 10px;
+  /* top: 2px; */
+}
+.login_Otppage {
+  position: relative;
+  /* top: 60px; */
+  left: 115px;
+  top: 20px;
+  font-size: 23px;
+  color: rgb(64, 64, 64);
+}
+
+
+.reveive_opt{
+    color: rgb(242, 56, 56);
+    position: relative;
+    left: 75px;
+    top: 30px;
+    font-size: 13px;
+}
+.login_inputs_Otppage{
+  position: relative;
+  top: 100px;
+  left: 25px;
+}
+.input_box_Otppage {
+  position: relative;
+  left: 7px;
+  bottom: 50px;
+  width: 350px;
+  margin: 20px;
+}
+
+.input_box_forgetpassword input {
+  width: 75%;
+  height: 45px;
+  padding-left: 45px;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.icon_Otppage {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  z-index: 10;
+}
+.link_password{
+  position: relative;
+  left: 215px;
+  bottom: 13px;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+.Otppage_button{
+  height: 33px;
+  width: 140px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: rgb(212, 51, 51);
+  position: relative;
+  bottom: 50px;
+  /* top: 30px; */
+  left: 97px;
+}
+.otp_space{
+    height: 60px;
+    width: 250px;
+    /* border: 1px solid black; */
+    position: relative;
+    left: 70px;
+    top: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.otp_input{
+  width: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  padding-left: 10px;
+}
+.resend_otp{
+  color: gray;
+  font-size: 14px;
+  position: relative;
+  left: 120px;
+  bottom: 30px;
+
+}
+.otp_page{
+   text-decoration: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

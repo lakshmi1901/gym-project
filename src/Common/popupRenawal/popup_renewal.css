@@ -1,0 +1,90 @@
+.PopupRenewal_main {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 7000;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.PopupRenewal_card {
+    height: 230px;
+    width: 350px;
+    max-width: calc(100vw - 30px);
+    box-shadow: 3px 3px 8px 5px rgb(139, 139, 139);
+    border-radius: 8px;
+    background-color: rgb(244, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.PopupRenewal_content {
+    height: 170px;
+    width: 250px;
+    position: relative;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+.PopupRenewal_select{
+    border: none;
+    outline: none;
+}
+
+label{
+    position: relative;
+    left: 20px;
+    color: rgb(68, 68, 68);
+}
+.PopupRenewal_select{
+    position: relative;
+    left: 70px;
+    background-color: rgb(241, 238, 238);
+}
+.PopupRenewal_inputDate{
+    position: relative;
+    left: 66px;
+    top: 1px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(131, 131, 131);
+    background-color: rgb(241, 238, 238);
+}
+.PopupRenewal_inputDate1{
+    position: relative;
+    left: 46px;
+    top: 1px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(131, 131, 131);
+    background-color: rgb(241, 238, 238);
+}
+
+.PopupRenewal_btn{
+    color: white;
+    background-color: rgb(40, 40, 40);
+    width: 75px;
+    height: 22px;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    left: 84px;
+    top: 35px;
+}
+.PopupRenewal_expiry_box ,
+.PopupRenewal_join_box,
+.PopupRenewal_duradion_box{
+    margin-top: 15px;
+}
+.PopupRenewal_inputDate{
+    /* border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(131, 131, 131);
+    background-color: rgb(241, 238, 238); */
+}

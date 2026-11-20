@@ -1,0 +1,132 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.login_page {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/projectimg/page2.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+.login_form {
+  height: 480px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  top: 150px;
+  left: 300px;
+}
+.form_head {
+  display: flex;
+  position: relative;
+  left: 90px;
+  top: 30px;
+  /* justify-content: center; */
+}
+.form_circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgb(2, 2, 71);
+}
+.form_head1 {
+  position: relative;
+  left: 30px;
+  top: 2px;
+}
+.login {
+  position: relative;
+  top: 60px;
+  right: 60px;
+  font-size: 23px;
+}
+.login_inputs{
+  position: relative;
+  top: 100px;
+  left: 25px;
+}
+.input_box {
+  position: relative;
+  width: 350px;
+  margin: 20px; 
+}
+
+.input_box input {
+  width: 75%;
+  height: 45px;
+  padding-left: 45px;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+  position: relative;
+  top: 0px;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  /* bottom: 40px; */
+  transform: translateY(-50%);
+  color: #aaa;
+  z-index: 10;
+}
+.link_password{
+  position: relative;
+  left: 215px;
+  bottom: 13px;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+.login_button{
+  height: 33px;
+  width: 140px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: rgb(212, 51, 51);
+  position: relative;
+  top: 30px;
+  right: 17px;
+}
+
+.input_box {
+  position: relative;
+}
+
+.password_icon {
+  position: absolute;
+  right: 55px;
+  top: 13px;
+  cursor: pointer;
+  color: gray;
+}
+
+.login_button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.create_account_text {
+  position: relative;
+  top: 50px;
+  left: -25px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+
+.create_account_link {
+  color: rgb(212, 51, 51);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create_account_link:hover {
+  text-decoration: underline;
+}

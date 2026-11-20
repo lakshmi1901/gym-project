@@ -1,0 +1,197 @@
+.user_profile_main{
+    height: 720px;
+    width: 100%;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15000;
+    position: relative;
+    bottom: 720px;
+}
+.user_profile_card{
+    height: 450px;
+    width: 600px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+
+}
+.view_profile{
+    color: rgb(85, 85, 85);
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+.profile_back{
+    position: relative;
+    left: 525px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(215, 215, 215);
+}
+.profile_imgg{
+    position: relative;
+    left: 170px;
+    /* top: 10px; */
+}
+
+.profile_imgga{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+.profile_namee{
+    position: relative;
+    width: 180px;
+    left: 30px;
+    border-radius: 10px;
+    /* top: 20px; */
+    /* right: 160px; */
+    bottom: 40px;
+    font-size: 23px;
+    color: rgb(87, 87, 87);
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    /* color: rgb(89, 89, 89); */
+
+}
+.userprofile_info_table{
+    position: relative;
+    left: 150px;
+    top: 50px;
+}
+.userprofile_info{
+    height: 70px;
+    width: 100%;
+    position: relative;
+    top: 30px;
+    display: flex;
+
+}
+.userprofile_box{
+    height: 70px;
+    width: 25%;
+    text-align: center;
+    border-right: 2px solid rgb(194, 194, 194);
+    
+}
+.userprofile_box p{
+    margin-top: 10px;
+    color: grey;
+}
+.boxxx{
+    border-right: none;
+}
+
+.userprofile_gyminfo{
+    height: 80px;
+    width: 100%;
+    position: relative;
+    top: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+
+}
+.userprofile_gyminfo_box{
+    height: 70px;
+    width: 22%;
+    border: 2px solid rgb(164, 164, 164);
+    text-align: center;
+    border-radius: 10px;
+
+}
+.userprofile_gyminfo_box p{
+    margin-top: 10px;
+    color: gray;
+}
+.edit_box{
+    height: 30px;
+    width: 100%;
+    position: relative;
+    top: 55px;
+    text-align: end;
+}
+
+
+.Userprofilepop_inputfield{
+    position: relative;
+    top: 10px;
+    width: 100px;
+    height: 25px;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    color: rgb(89, 89, 89);
+}
+.userprofile_edit{
+    height: 24px;
+    width: 70px;
+    border-radius: 3px;
+    border: 1px solid rgb(135, 135, 135);
+    position: relative;
+    top: 40px;
+    right: 80px;
+    /* left: 20px; */
+}
+.userprofile_save{
+    position: relative;
+    right: 80px;
+    height: 24px;
+    width: 70px;
+    border-radius: 3px;
+    border: 1px solid rgb(135, 135, 135);
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+
+
+
+.profile_imgga {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile_camera_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.profile_camera_buttons button {
+  padding: 5px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #818f9b;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  /* top: 30px; */
+}
+
+.profile_camera_buttons button:hover {
+  background-color: #125aa0;
+}
+.Retake_Photo{
+    position: relative;
+    right: 75px;
+}
+.Capture_Photo{
+    position: relative;
+    right: 70px;
+}
+.Cancel_Camera{
+    position: relative;
+    right: 60px;
+}

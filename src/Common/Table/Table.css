@@ -1,0 +1,80 @@
+/* .table_con{
+    height: 100%;
+    width: 100%;  
+    overflow-y: scroll;
+   
+}
+.expire3days_main{
+    height: 530px;
+    width: 1240px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 7px gray;
+}
+
+.thead_bg{
+    height: 100px;
+    width: 1222px;
+    border-radius: 12px;
+    background-color: rgb(247, 243, 243);
+}
+.expire3days_table ,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+.expire3days_content{
+    color: gray;
+    position: sticky;
+    top: 210px;
+    z-index: 100;
+    margin-left: 20px;
+}
+
+.expire3days_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expire3days_thead {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    position: sticky;
+    top: 0px;
+
+}
+
+.expire3days_table th,
+.expire3days_table td {
+    padding: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.expire3days_tbody tr {
+    display: table-row;
+}
+
+.expire3days_tbody td {
+    display: table-cell;
+} */
+
+.nodata_image{
+    width: 560px;
+    height: 280px;
+    border-radius: 50px;
+    
+    
+}
+.table_checkbox{
+    position: relative;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+}
+
+.user_register_image{
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.start_page {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/projectimg/page1.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+.circle{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.beast_force{
+    color: white;
+    font-size: 22px;
+    position: relative;
+    left: 170px;
+    top: 12px;
+}
+.centre_content{
+    color: white;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    width: 395px;
+    /* border: 1px solid white; */
+}
+.get_ready{
+    font-size: 45px;
+}
+.shape{
+    font-size: 17px;
+    position: relative;
+    left: 5px;
+}
+.content1a{
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    left: 1px;
+}
+.btn_getstart{
+    width: 170px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    position: relative;
+    top: 20px;
+    background-color: rgb(247, 33, 33);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    /* text-decoration: none; */
+
+}
+.Get_Starteda{
+    font-size: 19px;
+    position: relative;
+    left: 36px;
+    top: 10px;
+    /* text-decoration: none; */
+}
+
+.social_container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 20px;
+    position: relative;
+    top: 310px;
+}
+
+
+.icon_circle {
+    width: 45px;
+    height: 45px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+.icon_circle svg {
+    font-size: 28px;
+    color: #e91e63;
+}

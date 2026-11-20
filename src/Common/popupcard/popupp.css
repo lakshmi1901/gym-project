@@ -1,0 +1,86 @@
+
+.popup_main {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6000;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.popup_card {
+    height: 230px;
+    width: 350px;
+    max-width: calc(100vw - 30px);
+    box-shadow: 3px 3px 8px 5px rgb(139, 139, 139);
+    border-radius: 8px;
+    background-color: rgb(244, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.popup_content {
+    height: 180px;
+    width: 270px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.popup_div {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_contenta {
+    margin: 0;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.popup_sure,
+.popup_cancel {
+    height: 27px;
+    width: 75px;
+    position: absolute;
+    top: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.popup_sure {
+    left: 35px;
+    background-color: black;
+    color: rgb(246, 248, 248);
+    border: none;
+}
+
+.popup_cancel {
+    left: 160px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.popup_sure:hover {
+    opacity: 0.85;
+}
+
+.popup_cancel:hover {
+    background-color: #f2f2f2;
+}

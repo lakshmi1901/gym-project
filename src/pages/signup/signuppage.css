@@ -1,0 +1,129 @@
+.signup_page {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../assets/projectimg/page2.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.signup_form {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 28px 30px 24px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  top: 40px;
+  left: 300px;
+}
+
+.signup_head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.signup_circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgb(2, 2, 71);
+}
+
+.signup_brand {
+  font-size: 16px;
+}
+
+.signup_title {
+  font-size: 23px;
+  margin: 18px 0 8px;
+}
+
+.signup_input_box {
+  position: relative;
+  margin: 14px 0;
+}
+
+.signup_input_box input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding-left: 45px;
+  padding-right: 42px;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.signup_icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  z-index: 10;
+}
+
+.signup_eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: gray;
+}
+
+.signup_error {
+  min-height: 18px;
+  margin: 4px 0 6px;
+  font-size: 13px;
+  color: rgb(200, 30, 30);
+  text-align: center;
+}
+
+.signup_button {
+  display: block;
+  height: 36px;
+  width: 160px;
+  margin: 6px auto 0;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: rgb(212, 51, 51);
+  cursor: pointer;
+}
+
+.signup_button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.signup_footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+
+.signup_link {
+  color: rgb(212, 51, 51);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup_link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .signup_form {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 32px);
+  }
+}

@@ -1,0 +1,106 @@
+
+.accountexpired_main {
+    width: 100%;
+    height: 530px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 7px gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.accountexpired_content {
+    color: gray;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.accountexpired_thead_bg {
+    display: none;
+}
+
+.accountsexpired_table_con {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+}
+.accountexpired_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    top: 0;
+    table-layout: auto;
+    background-color: white;
+    
+}
+
+.accountexpired_table thead {
+    /* position: sticky; */
+    top: 60px;
+    z-index: 50;
+    background-color: #f2f2f2;
+}
+
+.accountexpired_thead {
+    background-color: #f2f2f2;
+    /* position: sticky; */
+    top: 0px;
+    z-index: 50;
+    border: none;
+}
+
+.accountexpired_table th,
+.accountexpired_table td {
+    min-width: 150px;
+    /* padding: 20px 30px; */
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.accountexpired_table th:first-child,
+.accountexpired_table td:first-child {
+    border-left: 1px solid #ddd;
+}
+
+
+.accountexpired_table th {
+    border-top: 1px solid #ddd;
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.accountexpired_tbody {
+    position: relative;
+}
+
+.accountexpired_tbody tr {
+    display: table-row;
+}
+
+
+.accountexpired_tbody td {
+    display: table-cell;
+    background-color: white;
+    color: #555;
+}
+
+
+.accountexpired_tbody tr:hover td {
+    background-color: #fafafa;
+}
+
+

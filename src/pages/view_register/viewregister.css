@@ -1,0 +1,129 @@
+
+.viewregister_main {
+    width: 100%;
+    height: 729px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgb(225, 224, 224);
+}
+.viewregister_conta p {
+    color: rgb(71, 71, 71);
+    position: relative;
+    left: 70px;
+    top: 20px;
+}
+
+.viewregister_tableee {
+    width: 100%;
+    height: 590px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: relative;
+    top: 50px;
+}
+
+.viewregister_tableee table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.viewregister_tableee th {
+    height: 60px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+    white-space: nowrap;
+    position: relative;
+    /* bottom: 18px; */
+
+}
+
+.viewregister_tableee td {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.viewregister_headcontent{
+    height: 60px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+
+}
+.viewregister_conta ,.viewregister_contb{
+    height: 60px;
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+
+
+.viewregister_inputt{
+    height: 30px;
+    width: 160px;
+    position: relative;
+    top: 5px;
+    left: 26px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 30px;
+    
+}
+.viewregister_contc{
+    height: 60px;
+    width: 250px;
+    /* border: 1px solid black; */
+    position: relative;
+    left: 350px;
+}
+.viewregister_search{
+    position: relative;
+    right: 130px;
+    top: 15px;
+    color: rgb(73, 72, 72);
+    z-index: 3000;
+}
+.viewregister_filter{
+    position: relative;
+    left: 20px;
+    top: 14px;
+    z-index: 2100;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    background-color: rgb(196, 196, 196);
+}
+.viewregister_contd{
+    height: 30px;
+    width: 150px;
+    /* border: 1px solid black; */
+    position: relative;
+    left: 420px;
+    top: 6px;
+    display: flex;
+}
+.download_icon{
+    margin-left: 20px;
+}
+.delete_icon ,.download_icon {
+    background-color: rgb(196, 196, 196);
+    border-radius: 4px;
+    position: relative;
+    left: 40px;
+
+}
+
+.delete_checkbox{
+    position: relative;
+    top: 5px;
+    left: 20px;
+    height: 16px;
+    width: 16px;
+}

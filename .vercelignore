@@ -1,0 +1,11 @@
+node_modules
+venv
+dist
+.git
+.env
+.env.*
+!.env.example
+db.json
+backup-*/
+server/.jwt-secret
+*.log
