@@ -1,47 +1,36 @@
-<<<<<<< HEAD
 # Beast Forces Gym
 
-React/Vite frontend, Express API, and MySQL database.
+React/Vite frontend, Express API, local MySQL or hosted Supabase PostgreSQL.
 
-## Run locally with XAMPP
+## Vercel production
 
-1. Start **MySQL** in the XAMPP Control Panel. Start **Apache** if you want to use phpMyAdmin.
-2. Run `npm install`.
-3. Copy `.env.example` to `.env`. The defaults use XAMPP's local MySQL (`127.0.0.1:3306`, user `root`, no password, database `gym_project`).
-4. Run `npm start`.
+Connect the Supabase integration to the project in Vercel. It supplies POSTGRES_URL
+and SUPABASE_JWT_SECRET. The API selects PostgreSQL when POSTGRES_URL or DATABASE_URL
+is present; otherwise it uses MySQL. The frontend uses the same-origin /api endpoint.
 
-The frontend is at `http://localhost:5173`, the API at `http://localhost:3000`, and phpMyAdmin at `http://localhost/phpmyadmin`. The API creates the local database and tables if needed. You can also run the API and frontend separately with `npm run server` and `npm run dev`.
+Gym records are kept in the private gym_private schema. Database connections verify
+TLS using the official bundled Supabase CA; POSTGRES_SSL_CA can override the CA for
+another provider. An explicit JWT_SECRET takes priority; otherwise a separate gym
+signing key is derived from the server-only Supabase secret. Never expose these
+secrets using VITE_ variables or commit .env files.
 
-## Deploy on Render with hosted MySQL
+Production registration requires an existing staff login, since all accounts share
+member records. Existing accounts and passwords are preserved during migration.
+Password reset email delivery is not configured; the existing reset flow logs OTPs.
 
-The application uses SQL/MySQL; it does not use XAMPP or `db.json` as its live database. For deployment, use a MySQL-compatible database provider that accepts connections from Render, then deploy the API and frontend as separate Render services.
+## Local MySQL
 
-### API service
+Start MySQL in XAMPP, configure DB_HOST, DB_PORT, DB_USER, DB_PASSWORD and DB_NAME in
+.env (see .env.example), and run npm install followed by npm start.
+The frontend runs on localhost:5173 and the API on localhost:3000.
+For the legacy JSON-to-MySQL import, run npm run db:import before starting the server.
 
-Create a Render **Web Service** for this repository. Use `npm install` as the build command and `npm run server` as the start command. Set these environment variables in Render (do not commit credentials):
+## Migration and checks
 
-- `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`: connection details from the hosted MySQL provider. The database must already exist; the API creates its tables at startup.
-- `DB_SSL=true` if required by the provider. If it supplies a CA certificate, set `DB_SSL_CA` to that certificate.
-- `JWT_SECRET`: a private random value of at least 32 characters.
-- `DEFAULT_ADMIN_PASSWORD`: a strong password, required when the hosted database has no accounts yet.
-- `CORS_ORIGINS`: the exact public URL of the frontend, for example `https://your-site.onrender.com`.
+With the local MySQL settings and destination POSTGRES_URL configured, run
+node server/migrate-postgres.js. This copies accounts and members, preserves password
+hashes, skips duplicates and never modifies the local source. Back up data first.
 
-Render sets `NODE_ENV=production`; the API will refuse to start if database credentials or `JWT_SECRET` are missing instead of silently trying a local database.
-
-### Frontend service
-
-Create a Render **Static Site** for the same repository. Set the build command to `npm install && npm run build`, the publish directory to `dist`, and the build environment variable `VITE_API_URL` to the public API URL, for example `https://your-api.onrender.com`. This value is embedded during the frontend build, so set it before deploying.
-
-### Move existing data
-
-For data already in local XAMPP MySQL, export the `gym_project` database from phpMyAdmin and import it into the hosted MySQL database. For data still in the legacy `db.json`, configure the database environment variables locally to point at the hosted database and run `npm run db:import`. The importer skips duplicate IDs/emails; it does not overwrite existing SQL records. Keep backups private.
-
-## Database and authentication
-
-- `server/schema.sql` defines `accounts` and `users_info`. Member records use a JSON column so existing mixed-case fields, profile pictures, and payment history are retained.
-- All live reads and writes use MySQL. `db.json` is only a legacy import source.
-- Passwords are stored as Argon2id hashes. JWTs use `JWT_SECRET`; never expose it or database credentials.
-- Password reset OTPs print in the API terminal; email delivery is not configured.
-=======
-# gym-project
->>>>>>> c7cd9869f97c2ba2e38340bc5bf93e5502877b10
+Run npm run build to validate the frontend. Run node server/postgres-smoke-test.js
+against PostgreSQL for login, authorization, member CRUD, expiry and token tests.
+All test records are contained in a transaction which is rolled back.

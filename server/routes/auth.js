@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
 import express from "express";
 import { db } from "../db.js";
-import { JWT_SECRET, JWT_EXPIRES_IN } from "../config.js";
+import { JWT_SECRET, JWT_EXPIRES_IN, IS_PRODUCTION } from "../config.js";
 import {
   hashPassword,
   verifyPassword,
@@ -57,6 +57,8 @@ const otpRequestLimiter = rateLimit({
 // =============================================================================
 router.post(
   "/register",
+  // All accounts share gym records: production registration requires staff login.
+  (req, res, next) => IS_PRODUCTION ? authenticate(req, res, next) : next(),
   registerLimiter,
   asyncHandler(async (req, res) => {
     const name = String(req.body?.name ?? "").trim();

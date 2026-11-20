@@ -56,9 +56,10 @@ app.use((err, req, res, next) => {
     return res.status(400).json({ message: "Invalid JSON body" });
   if (err.type === "entity.too.large")
     return res.status(413).json({ message: "Request body too large" });
-  if (err.code === "ER_DUP_ENTRY") return res.status(409).json({ message: "An account or member with this identifier already exists." });
+  if (err.code === "ER_DUP_ENTRY" || err.code === "23505") return res.status(409).json({ message: "An account or member with this identifier already exists." });
   console.error(err);
   res.status(500).json({ message: "Something went wrong on the server." });
 });
 
 export default app;
+

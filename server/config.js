@@ -41,7 +41,13 @@ function loadSecret() {
     if (process.env.JWT_SECRET.length >= 32) return process.env.JWT_SECRET;
     if (IS_PRODUCTION) throw new Error("JWT_SECRET must be at least 32 characters in production.");
   }
-  if (IS_PRODUCTION) throw new Error("JWT_SECRET must be configured in production.");
+  // Supabase's server-only JWT secret is installed by the Vercel integration.
+  // Derive a separate app key, so Supabase and gym tokens cannot be interchanged.
+  if (process.env.SUPABASE_JWT_SECRET?.length >= 32) {
+    return crypto.createHmac("sha256", process.env.SUPABASE_JWT_SECRET)
+      .update("beast-forces-gym/access-tokens/v1").digest("hex");
+  }
+  if (IS_PRODUCTION) throw new Error("JWT_SECRET or SUPABASE_JWT_SECRET must be configured in production.");
   const file = path.join(__dirname, ".jwt-secret");
   try {
     const existing = fs.readFileSync(file, "utf8").trim();
